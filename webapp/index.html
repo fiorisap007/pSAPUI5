@@ -1,0 +1,44 @@
+<!--
+Crear la carpeta del proyecto principal NombreProyecto
+Crear carpeta webapp
+	Crear archivo index.html
+	Crear archivo index.js
+Al nivel de la carpeta del Proyecto
+	Click derecho / new / Aplication HTML description
+		-->	
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<title>SAPUI5 from zero to hero</title>
+
+	</head>
+	<body class = "sapUiBody" id = "content">
+		<div>Hello World de HTML</div>
+		<!--
+			configuracion:
+		    data-sap-ui-resourceroots = es el namespace  '{"ruta.NombreProyecto": "./"}' 
+			data-sap-ui-theme="sap_fiori_3"  o  "sap_bluecrystal" o "sap_belize_plus"
+			data-sap-ui-oninit = colocar "module:ruta/NombreProyecto/index"
+			
+			Si usas index.js
+			data-sap-ui-oninit="module:com/dprb/logaligroup/SAPUI5/index"
+		-->
+		<div data-sap-ui-component 
+		     data-name="com.dprb.logaligroup.SAPUI5" 
+		     data-id="container"
+		     data-setting='{"id": "com.dprb.logaligroup"}'
+		>
+		</div>
+		<script id="sap-ui-bootstrap"
+				src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+				data-sap-ui-theme="sap_bluecrystal"
+				data-sap-ui-resourceroots='{"com.dprb.logaligroup.SAPUI5": "./"}' 
+				data-sap-ui-compatVersion="edge"
+				data-sap-ui-bindingSyntax="complex"
+				data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+				data-sap-ui-async="true"
+				data-sap-ui-frameOptions="trusted" >
+		</script>			
+	</body>
+</html>
